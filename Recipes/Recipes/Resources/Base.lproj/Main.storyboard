@@ -93,17 +93,46 @@
             </objects>
             <point key="canvasLocation" x="1801" y="170"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Detail View Controller-->
         <scene sceneID="0fq-6O-j9u">
             <objects>
-                <viewController id="kCm-Q5-KSo" sceneMemberID="viewController">
+                <viewController id="kCm-Q5-KSo" customClass="RecipeDetailViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydi-DD-4Pf">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="477"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK6-bj-YK0">
+                                <rect key="frame" x="74" y="20" width="187" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-KY-CX3">
+                                <rect key="frame" x="20" y="81" width="295" height="376"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t6H-KY-CX3" firstAttribute="top" secondItem="IK6-bj-YK0" secondAttribute="bottom" constant="20" id="1Gt-f8-2am"/>
+                            <constraint firstItem="ZSM-e4-d7s" firstAttribute="trailing" secondItem="t6H-KY-CX3" secondAttribute="trailing" constant="20" id="1Jz-Xo-wey"/>
+                            <constraint firstItem="t6H-KY-CX3" firstAttribute="leading" secondItem="ZSM-e4-d7s" secondAttribute="leading" constant="20" id="80j-8b-FV5"/>
+                            <constraint firstItem="ZSM-e4-d7s" firstAttribute="bottom" secondItem="t6H-KY-CX3" secondAttribute="bottom" constant="20" id="GME-X4-MLa"/>
+                            <constraint firstItem="IK6-bj-YK0" firstAttribute="centerX" secondItem="ydi-DD-4Pf" secondAttribute="centerX" id="I3P-vx-7kq"/>
+                            <constraint firstItem="t6H-KY-CX3" firstAttribute="centerX" secondItem="ydi-DD-4Pf" secondAttribute="centerX" id="iDb-Go-smh"/>
+                            <constraint firstItem="IK6-bj-YK0" firstAttribute="top" secondItem="ZSM-e4-d7s" secondAttribute="top" constant="20" id="xFB-je-cbu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZSM-e4-d7s"/>
                     </view>
                     <navigationItem key="navigationItem" id="fwJ-v0-aMJ"/>
+                    <connections>
+                        <outlet property="recipeNameLabel" destination="IK6-bj-YK0" id="KWP-4D-elI"/>
+                        <outlet property="recipeTextView" destination="t6H-KY-CX3" id="G3h-6S-Djs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y80-gK-xYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
