@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Recipes-->
         <scene sceneID="OBL-zj-jeM">
             <objects>
                 <viewController id="jF8-0S-sFq" customClass="MainViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,8 +22,8 @@
                                     <segue destination="BYZ-3b-0Kq" kind="embed" identifier="embeddedTableViewSegue" id="Pf9-46-NvU"/>
                                 </connections>
                             </containerView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxY-gY-EDh">
-                                <rect key="frame" x="171.5" y="116" width="32" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxY-gY-EDh">
+                                <rect key="frame" x="20" y="116" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -35,18 +35,18 @@
                         <constraints>
                             <constraint firstItem="ANE-7N-84l" firstAttribute="bottom" secondItem="qNZ-Y3-byx" secondAttribute="bottom" constant="20" id="8Yx-B6-fyy"/>
                             <constraint firstItem="qNZ-Y3-byx" firstAttribute="top" secondItem="xxY-gY-EDh" secondAttribute="bottom" constant="20" id="Cjt-3z-Y5m"/>
+                            <constraint firstItem="ANE-7N-84l" firstAttribute="trailing" secondItem="xxY-gY-EDh" secondAttribute="trailing" constant="20" id="FsH-D8-azd"/>
                             <constraint firstItem="xxY-gY-EDh" firstAttribute="top" secondItem="ANE-7N-84l" secondAttribute="top" constant="20" id="MjB-oP-rZD"/>
+                            <constraint firstItem="xxY-gY-EDh" firstAttribute="leading" secondItem="ANE-7N-84l" secondAttribute="leading" constant="20" id="Se8-jV-YkU"/>
                             <constraint firstItem="ANE-7N-84l" firstAttribute="trailing" secondItem="qNZ-Y3-byx" secondAttribute="trailing" constant="20" id="oe1-tN-9fX"/>
                             <constraint firstItem="qNZ-Y3-byx" firstAttribute="leading" secondItem="ANE-7N-84l" secondAttribute="leading" constant="20" id="szv-FT-6em"/>
                             <constraint firstItem="xxY-gY-EDh" firstAttribute="centerX" secondItem="op8-rR-mmv" secondAttribute="centerX" id="wR0-9D-zOH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ANE-7N-84l"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fNE-tc-4pu">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Recipes" id="fNE-tc-4pu"/>
                     <connections>
-                        <outlet property="textField" destination="xxY-gY-EDh" id="lxJ-1y-iKK"/>
+                        <outlet property="searchTextField" destination="xxY-gY-EDh" id="lxJ-1y-iKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLs-qR-Rlw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
